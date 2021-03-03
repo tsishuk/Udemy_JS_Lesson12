@@ -2,42 +2,45 @@
 
 
 
-const parametr = {
-	aname: "Tool",
-	aweight: 12345,
-	aobject: {
-		sfirst: "abcd",
-		ssecond: "gert",
-		sthird: 777
-	},
-	alast: "theend",
-	makeTest: function(){
-		console.log("Test");
-	}
-};
 
+const arr = [1, 22, 3, 15, 8];
 
-parametr.makeTest();
+console.log(arr);
 
-const {sfirst, ssecond, sthird} = parametr.aobject;
+arr.sort(compareNum);
 
-console.log(sfirst);
-// console.log(Object.keys(parametr).length);
+function compareNum(a, b) {
+	return a - b;
+}
+
+console.log(arr);
 
 
 
 
 
-//	--------------------------------------------------------------
-// for (let key in parametr){
-// 	if (typeof(parametr[key]) == 'object'){
-// 		console.log(`key = ${key}, - insight object: -`);
-// 		for (let inkey in parametr[key]){
-// 			console.log(`\tinkey = ${inkey}, value = ${parametr[key][inkey]}`);
-// 		}
-// 	}
-// 	else {
-// 		console.log(`key = ${key}, value = ${parametr[key]}`);
-// 	}
+
+// const str = prompt("", "");
+// const products = str.split(", ");
+// products.sort();
+// console.log(products.join("; "));
+
+// arr.forEach(function(item, i, arr){
+// 	console.log(`${i}: ${item} внутри массива ${arr}`);
+// });
+
+// arr.pop();
+// arr.push(777);
+
+
+// console.log(arr);
+
+
+// for (let value of arr){
+// 	console.log(value);
 // }
-//	--------------------------------------------------------------
+
+// for(let i =0; i < arr.length; i++){
+// 	console.log(arr[i]);
+// 	console.log();
+// }
