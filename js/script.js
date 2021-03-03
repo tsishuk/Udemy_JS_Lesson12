@@ -3,44 +3,40 @@
 
 
 
-const arr = [1, 22, 3, 15, 8];
+const number = {
+	a: 5,
+	b:7,
+	c: {
+		x:10,
+		y: 15
+	}
+};
 
-console.log(arr);
+function copyObj(oldObj){
+	const newObj = {};
 
-arr.sort(compareNum);
-
-function compareNum(a, b) {
-	return a - b;
+	let key;
+	for (key in oldObj){
+		newObj[key] = oldObj[key];
+	}
+	return newObj;
 }
 
-console.log(arr);
+const copiedObj = copyObj(number);
 
+copiedObj.b = 234;
+copiedObj.c.y = 777;
 
+// console.log(number);
+// console.log(copiedObj);
 
+const add = {
+	d: 2222,
+	e: 333
+};
 
+const clone = Object.assign({}, add);
+clone.d = 555;
 
-
-// const str = prompt("", "");
-// const products = str.split(", ");
-// products.sort();
-// console.log(products.join("; "));
-
-// arr.forEach(function(item, i, arr){
-// 	console.log(`${i}: ${item} внутри массива ${arr}`);
-// });
-
-// arr.pop();
-// arr.push(777);
-
-
-// console.log(arr);
-
-
-// for (let value of arr){
-// 	console.log(value);
-// }
-
-// for(let i =0; i < arr.length; i++){
-// 	console.log(arr[i]);
-// 	console.log();
-// }
+console.log(add);
+console.log(clone);
