@@ -1,64 +1,25 @@
 'use strict';
 
-let numberOfFilms;
-
-function start() {
-  numberOfFilms = +prompt("How much films ?", "");
-
-  while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-    numberOfFilms = +prompt("How much films ?", "");
-  }
+function first() {
+  setTimeout(function() {
+    console.log(1);
+  }, 500);
 }
 
-start();
-
-const personalMovieDB = {
-  count: numberOfFilms,
-  movies: {},
-  actors: {},
-  genres: [],
-  privat: false
-};
-
-
-function rememberMyFilms() {
-  for (let i = 0; i < 1;) {
-    console.log("i before = " + i);
-    const a = prompt("Which film?", ""),
-      b = +prompt("Your grade?", "");
-
-    if ((a == null) || (a.length == 0) || (a.length > 50)) { continue; }
-    personalMovieDB.movies[a] = b;
-    i++;
-  }
+function second() {
+  console.log(2);
 }
 
-rememberMyFilms();
+first();
+second();
 
-function detectPersonalLevel() {
-  if (personalMovieDB.count < 10) {
-    console.log("too few");
-  } else if (personalMovieDB.count < 30) {
-    console.log("normal");
-  } else {
-    console.log("too much");
-  }
+function learnJS(lang, callback){
+  console.log(`Я учу ${lang}`);
+  callback();
 }
 
-detectPersonalLevel();
-
-function showMyDB(hidden){
-  if (!hidden){12
-    console.log(personalMovieDB);
-  }
+function done() {
+  console.log('Done');
 }
 
-showMyDB(personalMovieDB.privat);
-
-function writeYourGenres() {
-  for (let i = 1; i <= 3; i++){
-    personalMovieDB.genres[i-1] = prompt(`Your favourite genre number ${i}`);
-  }
-}
-
-writeYourGenres();
+learnJS("JavaScript", done);
