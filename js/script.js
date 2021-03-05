@@ -1,28 +1,20 @@
 'use strict';
 
-// console.log([] + false - null + true);	// "NaN"
 
-// let y = 1;
-// let x = y = 2;
-// console.log(x);	// 2
+const box = document.getElementById("box");
+console.log(box);
 
-// console.log([] + 1 + 2);	// "12"
+const btns = document.getElementsByTagName("button");
+console.log(btns);
+console.log(btns[0]);
 
-// alert("1"[0]);		// "1"
+const circles = document.getElementsByClassName('circle');
+console.log(circles);
 
-// console.log(2 && 1 && null && 0 && undefined);  // null
+const hearts = document.querySelectorAll('.heart');
+hearts.forEach(item => {
+    console.log(item);
+});
 
-
-// console.log((!! 1 && 2) === (1 & 2));   // false
-
-// alert(null || 2 && 3 || 4); // 3
-
-// let a = [1, 2, 3];
-// let b = [1, 2, 3];
-// console.log(a === b);   // false
-
-// alert(+"Infinity"); // infinity
-
-// console.log("Ёжик" > "яблоко"); // false
-
-// console.log(0 || "" || 2 || undefined); //2
+const oneHeart = document.querySelector('.heart');
+console.log(oneHeart);
